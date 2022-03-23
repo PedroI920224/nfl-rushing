@@ -1,19 +1,12 @@
 # RushingApp
+This project is an assessment that responds to the next task:
+https://github.com/tsicareers/nfl-rushing
 
-To start your Phoenix server:
+<img width="1334" alt="image" src="https://user-images.githubusercontent.com/19864868/159716280-a1703929-e7b2-4b53-99d6-2ee7d245cfb0.png">
 
-  * Install dependencies with `mix deps.get`
-  * Create and migrate your database with `mix ecto.setup`
-  * Start Phoenix endpoint with `mix phx.server` or inside IEx with `iex -S mix phx.server`
-
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
-
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
-
-## Learn more
-
-  * Official website: https://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Forum: https://elixirforum.com/c/phoenix-forum
-  * Source: https://github.com/phoenixframework/phoenix
+you can run this project using docker-compose:
+```
+docker-compose build
+docker-compose up
+```
+you should have available the port 4001 to check the project running
