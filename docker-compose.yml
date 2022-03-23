@@ -1,0 +1,32 @@
+version: '3.2'
+networks:
+  default:
+    driver: bridge
+    driver_opts:
+      com.docker.network.driver.mtu: 1350
+services:
+  web:
+    container_name: web
+    restart: unless-stopped
+    build: .
+    volumes:
+      - type: bind
+        source: .
+        target: /rushing_app
+        consistency: delegated
+      - .build:/rushing_app/_build/
+      - .elixir_deps:/rushing_app/deps/
+      - .elixir_static_assets:/rushing_app/priv/static/
+    ports:
+      - "0.0.0.0:4001:4001"
+    entrypoint: ./docker-entrypoint.sh
+    # Default action is to start webapp
+    command:
+      - default
+    env_file:
+      - .env.development
+
+volumes:
+  elixir_deps:
+  elixir_build_artifacts:
+  elixir_static_assets:
