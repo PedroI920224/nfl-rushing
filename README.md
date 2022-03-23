@@ -26,6 +26,14 @@ also you will be able to download csv file without lost the previous action:
 
 <img width="648" alt="image" src="https://user-images.githubusercontent.com/19864868/159731454-8ca9e916-aebf-452a-8d21-aa500b0371b4.png">
 
+Main files:
+1. `lib/rushing_app_web/live/rushing_statistics_live.ex`: LiveView logic
+2.  `lib/rushing_app_web/live/rushing_statistics_live.html.heex`: Statistics HTML
+3.  `lib/rushing_app/statistics_helper.ex`: Helper to refactor logic for statistics_view.
+4.  `lib/rushing_app/csv_helper.ex`: Helper to handler CSV implementation.
+5.  `lib/rushing_app_web/controllers/downloader_statistics_controller.ex`: Controller to create Statistic CSV
+
+
 What missing:
 1. Populate with tests using ExUnit.
 2. Improve Design.
